@@ -49,7 +49,6 @@ class Send_Mail_Post_Pending {
             $subject = '[REVISAR NOVO POST] ' . get_the_title( $post_id );
             $message = 'Existe um novo post para revisão: ' . get_the_title( $post_id ) . "\n\n";
             $message .= 'Revisar o post: ' . admin_url() . 'post.php?post=' . $post_id . '&action=edit' . "\n\n";
-            //$message .= $post;
 
             wp_mail( $email, $subject, $message );
     }
