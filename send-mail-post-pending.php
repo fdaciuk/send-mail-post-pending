@@ -52,6 +52,7 @@ class Send_Mail_Post_Pending {
             //$message .= $post;
 
             wp_mail( $email, $subject, $message );
+        }
     }
 
 } // Close Send_Mail_Post_Pending class.
