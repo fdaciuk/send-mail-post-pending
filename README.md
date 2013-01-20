@@ -1,4 +1,5 @@
 # Send Mail Post Pending #
+
 **Contributors:** fdaciuk, claudiosanches
 **Tags:** mail, pending, post review
 **Requires at least:** 3.0

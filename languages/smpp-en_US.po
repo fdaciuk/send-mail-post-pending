@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Send Mail Post Pending v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-01-20 20:09:06+0000\n"
+"Last-Translator: fernando-d <fernando@da2k.com.br>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#. translators: plugin header field 'Name'
+#: send-mail-post-pending.php:0
+#@ smpp
+msgid "Send Mail Post Pending"
+msgstr ""
+
+#. translators: plugin header field 'PluginURI'
+#: send-mail-post-pending.php:0
+#@ smpp
+msgid "http://www.tudoparawordpress.com.br/dicas-wordpress/novo-post-para-revisao/"
+msgstr ""
+
+#. translators: plugin header field 'Author'
+#: send-mail-post-pending.php:0
+#@ smpp
+msgid "fdaciuk, claudiosanches"
+msgstr "Fernando Daciuk, Claudio Sanches"
+
+#. translators: plugin header field 'AuthorURI'
+#: send-mail-post-pending.php:0
+#@ smpp
+msgid "http://da2k.com.br/"
+msgstr ""
+
+#. translators: plugin header field 'Version'
+#: send-mail-post-pending.php:0
+#@ smpp
+msgid "1.0"
+msgstr ""
+
+#. translators: plugin header field 'Description'
+#: send-mail-post-pending.php:0
+#@ smpp
+msgid "Send e-mail to the administrator for review if there are posts"
+msgstr ""
+
+#: send-mail-post-pending.php:49
+#@ smpp
+msgid "[REVIEWING NEW POST] "
+msgstr ""
+
+#: send-mail-post-pending.php:50
+#@ smpp
+msgid "There is a new post for review: "
+msgstr ""
+
+#: send-mail-post-pending.php:51
+#@ smpp
+msgid "Review the post: "
+msgstr ""
+
