@@ -21,6 +21,9 @@ class Send_Mail_Post_Pending {
         // Load textdomain.
         add_action( 'plugins_loaded', array( &$this, 'languages' ), 0 );
 
+        // Add menu options.
+        add_action( 'admin_menu', array( &$this, 'add_menu' ) );
+
         // Send mail.
         add_action( 'save_post', array( &$this, 'send_mail' ), 10, 2 );
 
@@ -32,6 +35,28 @@ class Send_Mail_Post_Pending {
     public function languages() {
         load_plugin_textdomain( 'smpp', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
     }
+
+    /**
+     * Add Menu Options.
+     */
+    public function add_menu() {
+        add_options_page( 'Send Mail Post Pending', 'SMPP', 'manage_options', 'smpp_options', array( &$this, 'page_settings' ) );
+    }
+
+    /**
+     * Page Settings
+     */
+    public function page_settings() {
+        include_once 'smpp-settings.php';
+        // $settings_api = WeDevs_Settings_API::getInstance();
+
+        // echo '<div class="wrap">';
+        //     settings_errors();
+        //     $settings_api->show_navigation();
+        //     $settings_api->show_forms();
+        // echo '</div>';
+    }
+
 
     /**
      * Send an email to the administrator if there are posts for review
@@ -56,4 +81,4 @@ class Send_Mail_Post_Pending {
 
 } // Close Send_Mail_Post_Pending class.
 
-$send_mail_post_pending = new Send_Mail_Post_Pending();
+$send_mail_post_pending = new Send_Mail_Post_Pending;
