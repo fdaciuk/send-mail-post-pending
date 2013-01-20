@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Send Mail Post Pending
  * Plugin URI: http://www.tudoparawordpress.com.br/dicas-wordpress/novo-post-para-revisao/
- * Description: Send Mail Post Pending
+ * Description: Send e-mail to the administrator for review if there are posts
  * Author: fdaciuk, claudiosanches
  * Author URI: http://da2k.com.br/
  * Version: 1.0
@@ -46,17 +46,14 @@ class Send_Mail_Post_Pending {
 
         if ( 'pending' === $post_status && ! wp_is_post_revision( $post ) ) {
             $email   = get_option( 'admin_email' );
-            $subject = '[REVISAR NOVO POST] ' . get_the_title( $post_id );
-            $message = 'Existe um novo post para revisão: ' . get_the_title( $post_id ) . "\n\n";
-            $message .= 'Revisar o post: ' . admin_url() . 'post.php?post=' . $post_id . '&action=edit' . "\n\n";
-            //$message .= $post;
+            $subject = __( '[REVIEWING NEW POST] ', 'smpp' ) . get_the_title( $post_id );
+            $message = __( 'There is a new post for review: ', 'smpp' ) . get_the_title( $post_id ) . "\n\n";
+            $message .= __( 'Review the post: ' , 'smpp' ) . admin_url() . 'post.php?post=' . $post_id . '&action=edit' . "\n\n";
 
             wp_mail( $email, $subject, $message );
         }
     }
-}
-
 
 } // Close Send_Mail_Post_Pending class.
 
-$send_mail_post_pending = new Send_Mail_Post_Pending;
+$send_mail_post_pending = new Send_Mail_Post_Pending();
