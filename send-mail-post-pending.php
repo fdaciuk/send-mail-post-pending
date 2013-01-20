@@ -44,7 +44,7 @@ class Send_Mail_Post_Pending {
     public function send_mail( $post_id, $post ) {
         $post_status = get_post_status( $post );
 
-        if ( 'pending' ==== $post_status && ! wp_is_post_revision( $post ) ) {
+        if ( 'pending' === $post_status && ! wp_is_post_revision( $post ) ) {
             $email   = get_option( 'admin_email' );
             $subject = '[REVISAR NOVO POST] ' . get_the_title( $post_id );
             $message = 'Existe um novo post para revisão: ' . get_the_title( $post_id ) . "\n\n";
